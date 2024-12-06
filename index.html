@@ -1,1385 +1,623 @@
-<html lang="en"><head><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button:not([disabled]):hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel:not([disabled]):hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger:not([disabled]):hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metadatos -->
+    <meta charset="utf-8">
+    <meta name="author" content="Jane Doe">
+    <meta name="description" content="Portafolio de desarrollo web de Jane Doe">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Titulo -->
+    <title>Daniel Aracena | Software Engineer</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="imagenes/icono.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/tutorials/timelines/timeline-3/assets/css/timeline-3.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+
+      .sobre-1{
+        margin-top: 0vh;
+      }
+
+      .stack-1{
+        margin-top: 2vh;
+      }
+      
+      .sobre-mi {
+          height: 100vh;
+          padding: 10px;
+      }
+      
+      .sobre-mi-1{
+         font-size: 3vw;
+      }
+
+      .sobre-mi-2{
+        font-size: 27px;
+      }
+
+      .sobre-mi .contenedor {
+          max-width: 42vw;
+          text-align: center;
+      }
+      
+      .mi-stack {
+          margin-top: 5rem;
+          font-size: 39px;
+      }
+
+      .img-stack img {
+          width: 3vw;
+          height: 8vh;
+      }
+
+      /* .right{
+        width: 40vw!important;
+      } */
+      
+
+      .card-title {
+        font-size: 25px;
+      }
+
+      .card-subtitle{
+        font-size: 17px;
+        margin-bottom: 0.3rem!important;
+      }
+
+
+      .iconos-contenedor {
+        text-align: justify;
+        width: 17vw;
+      }
+
+      #modalImage {
+          width: 120vh !important;
+          height: 75vh;
+      }
+
+      @media (max-width: 430px) {
+        #modalImage {
+          width: 100vh !important;
+          height: 40vh;
+          object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+          cursor: zoom-in; /* Indica que se puede hacer zoom */
+        }
+
+        body {
+          overflow-x: hidden;
+        }
+
+        .navbar {
+          padding: 0.3rem 0rem 0rem 0rem;
         
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        }
+
+        .hero-principal {
+            width: 100vw;
+        }
+
+        .hero-principal h2 {
+            font-size: 1rem;
+            color: #615151;
+        }
+
+        .hero-principal {
+            padding: 2rem 0rem 2rem 0rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+          
+        }
+
+
+        .seccion-titulo {
+          font-size: 3rem;
+        }
+
+        .sobre-mi {
+           height: 105vh;
+        }
+
+        .sobre-mi-1 {
+            font-size: 10vw;
+            padding: 0px 0;
+        }
+
+
+        .sobre-mi .contenedor {
+            max-width: 90vw;
+            text-align: center;
+        }
+
+        .sobre-mi-2 {
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .mi-stack {
+            margin-top: 1rem;
+            font-size: 39px;
+        }
+
+        .img-stack img {
+            width: 12vw;
+            height: 8vh;
+        }
+
+        .overlay{
+            opacity: 1;
+        }
+        .proyecto img{
+            opacity: 0.2;
+        }
+
+        .iconos-contenedor {
+            text-align: justify;
+            width: 60vw;
+            font-size: 14px;
+        }
+
+        .titulo-mp{
+            font-size: 15px!important;
+        }
+
+        .proyectos-recientes img{
+            height:35vh;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <a class="navbar-brand" href="#">
+            <img src="imagenes/icono.png" width="50" alt="Logo de la página web">
+          </a>
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#sobre-mi">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonios">Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seccion Hero -->
+    <section class="hero align-items-stretch">
+      <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+        <img class="hero-imagen-desarrollador rounded-circle" src="imagenes/imagenes-desarrolladores/perfil1.png" alt="Foto de Jane Doe">
+        <h1>Hola, soy Daniel Aracena</h1>
+        <h2>Ingeniero de Software || Desarrollador Full Stack</h2>
+      </div>
+      <div class="hero-inferior">
+        <img class="hero-inferior-imagen img-fluid" src="imagenes/hero-inferior.svg" alt="Monitor, laptop y logos de HTML, CSS, JavaScript y React.">
+      </div>
+    </section>
+
+    <!-- Sobre mi -->
+    <section id="sobre-mi" class="sobre-mi seccion-oscura">
+      <div class="contenedor sobre-1">
+        <h2 class="seccion-titulo sobre-mi-1">Sobre mi</h2>
+        <p class="seccion-texto sobre-mi-2">
+         
+          Luego de desempeñarme como Suboficial en el Ejército de Chile, decidí dar un giro en mi vida hacia la informática.  <br><br>
+          Actualmente como ingeniero sigo aprendiendo día a día, aplicando los conocimientos y las capacidades que me han permitido seguir ayudando a las personas y sus entornos a través de la tecnología, programación y el desarrollo de software.
         
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+        </p>
 
-        <!--==================== EMAIL SERVICE ====================-->
-        <!-- Sweet Alert -->
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><style type="text/css" id="operaUserStyle"></style>
-        <!-- Email.JS -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript">
-            (function() {
-                // emailjs.init('gF3M_-jS8KuvoCpV4');
-            })();
-        </script>
+        <div class="stack-1">
+          <h2 class="seccion-titulo mi-stack">Mi Stack de Superpoderes</h2>
+          <div class="img-stack">
+              <img src="imagenes/iconos/Php_dark.svg" alt="Ejemplo de SVG" width="70" height="70">
+              <img src="imagenes/iconos/python.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/javascript.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/react.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/vitejs.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/django.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/flask-wordmark-dark.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/laravel.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/redbean.png" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/bootstrap.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/Github_dark.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/git.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/mongodb-wordmark.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/sqlite.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/postgresql.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/sql-server.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/mysql.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/vscode.svg" alt="Ejemplo de SVG" width="50" height="50">
+              <img src="imagenes/iconos/postman.svg" alt="Ejemplo de SVG" width="50" height="50">
+          </div>
 
-        <!--==================== CALENDAR SERVICE ====================-->
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async=""></script>
+        </div>
 
-        <!--==================== TITLE and Favicon ====================-->
-        <title>Alma Guerrero Sánchez - Resume - Portafolio</title>
-        <!-- <link rel="shortcut icon" type="image/png" href="assets/img/"> --> 
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
-        <!-- <link rel="manifest" href="/site.webmanifest"> -->
+ 
+      </div>
+    </section>
 
-        <!-- MS Tile - for Microsoft apps-->
-        <meta name="msapplication-TileImage" content="https://github.com/nucerl/myPortfolio/blob/main/assets/snaps/light.png?raw=true">    
-
-        <!-- HTML Meta Tags -->
-        <title>Alma´s Portafolio 👋</title>
-        <meta name="description" content="Data Scientist | Data Analyst | Machine Learning Engineer | Python Developer | BI Developer">
-
-        
-        <!-- Google tag (gtag.js) -->
-        <!-- <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2367QRTG56"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-2367QRTG56');
-        </script> -->
-
-    <style type="text/css"></style></head>
-
-    <body class="dark-theme">
-        <!--==================== HEADER ====================-->
-        <header class="header scroll-header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">Alma Guerrero</a>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link">
-                                <i class="uil uil-estate nav__icon"></i> Home
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> About
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i> Skills
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#projects" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i> Projects
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#paper" class="nav__link active-link">
-                                <i class="uil uil-scenery nav__icon"></i> Papers
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contact
-                            </a>
-                        </li>
-                    </ul>
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
+    <!-- Experiencia -->
+    <section class="bsb-timeline-3 bg-light py-3 py-md-5 py-xl-8">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10 col-md-12 col-xl-10 col-xxl-9">
+            <ul class="timeline">
+              <li class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-body">
+                  <div class="timeline-content timeline-indicator">
+                    <div class="card border-0 shadow">
+                      <div class="card-body p-xl-4">
+                        <h5 class="card-subtitle text-secondary mb-1">JUN 2024 - Presente </h5>
+                        <h2 class="card-title mb-3">Desarrollador Full Stack</h2>
+                        <h6 class="card-subtitle text-secondary mb-1">NE Chile</h6>
+                        <p class="card-text m-0">Desarrollo de plataformas y herramientas para la automatización en la creación de cursos por IA.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="nav__btns">
-                    <!-- Theme Change Buttons -->
-                    <i class="uil uil-moon change-theme uil-sun" id="theme-button"></i>
-
-
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
+              </li>
+              <li class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-body">
+                  <div class="timeline-content timeline-indicator">
+                    <div class="card border-0 shadow">
+                      <div class="card-body p-xl-4">
+                        <h5 class="card-subtitle text-secondary mb-1">EN 2023 - Presente </h5>
+                        <h2 class="card-title mb-3">Profesor de programación</h2>
+                        <h6 class="card-subtitle text-secondary mb-1">Algorithmics Internacional</h6>
+                        <p class="card-text m-0">Tutoría de programación en Python básica - intermedia y avanzada para jóvenes y adolescentes.</p>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </nav>
-        </header>
+              </li>
+              <!-- Más elementos aquí -->
+              <li class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-body">
+                  <div class="timeline-content timeline-indicator">
+                    <div class="card border-0 shadow">
+                      <div class="card-body p-xl-4">
+                        <h5 class="card-subtitle text-secondary mb-1">JUL 2022 - NOV 2022</h5>
+                        <h2 class="card-title mb-3">Desarrollador FullStack</h2>
+                        <h6 class="card-subtitle text-secondary mb-1">Openagora</h6>
+                        <p class="card-text m-0">Desarrollo de módulos para la automatización de procesos de selección, talentos y RRHH.</p>
+                        <!-- PHP · PostgreSQL · Git · Amazon Web Services (AWS) · Scrum · JavaScript · Desarrollo de softwareAptitudes: PHP · PostgreSQL · Git · Amazon Web Services (AWS) · Scrum · JavaScript · Desarrollo de software -->
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home" data-id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/alma-guerrero/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                            <a href="https://www.researchgate.net/profile/Alma-Guerrero-5" target="_blank" class="home__social-icon">
-                                <i class="uil uil-book-open"></i>
-                            </a>
-                            <a href="https://github.com/almaguerrero" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                        </div>
-
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"></path>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"></path>
-
-                                    <image class="home__blob-img" x="12" y="18" xlink:href="assets/img/perfil.png"></image>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="home__data">
-                            <h1 class="home__title">Hi, I am Alma Guerrero.</h1>
-                            <h3 class="home__subtitle">Data Scientist | Data Analyst | Machine Learning Engineer | Python Developer | BI Developer</h3>
-                    
-                            <a href="#contact" class="button button--flex">
-                                Contact Me <i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
+                      </div>
                     </div>
-
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Scroll Down</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                        </a>
-                    </div>
+                  </div>
                 </div>
-            </section>
-
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about" data-id="about">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">Introduction</span>
-
-                <div class="about__container container grid">
-                    <img src="assets/img/about.png" alt="Erol Bicer Nuclear Power Plants Summit Session" class="about__img">
-
-
-                    <div class="about__data">
-                        <p class="about__description">Computer Systems Engineering with a background in artificial intelligence. My experience as
-                            a data scientist and artificial intelligence engineer has allowed me to work in various fields for
-                            problem-solving using intelligent tools. It has also enabled me to develop strong analytical skills
-                            to extract insights and patterns from large datasets.
-                            </p>
-
-                        <div class="about__info">
-                            <div>
-                                <span class="about__info-title">4+</span>
-                                <span class="about__info-name">Years' <br> Experience</span>
-                            </div>
-
-                            <div>
-                                <span class="about__info-title">5+</span>
-                                <span class="about__info-name">Projects <br> Completed</span>
-                            </div>
-
-                            <div>
-                                <span class="about__info-title">5</span>
-                                <span class="about__info-name">Papers <br> Published</span>
-                            </div>
-                            <div>
-                                <span class="about__info-title">1</span>
-                                <span class="about__info-name">Software <br>Registration</span>
-                            </div>
-                        </div>
-
-                        <div class="about__buttons">
-                            <a download="" href="assets/pdf/AEGS_CV_English.pdf" class="button button--flex">
-                                Download CV<i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                        </div>
+              </li>
+              <li class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-body">
+                  <div class="timeline-content timeline-indicator">
+                    <div class="card border-0 shadow">
+                      <div class="card-body p-xl-4">
+                        <h5 class="card-subtitle text-secondary mb-1">MAR 2021 - ABR 2022</h5>
+                        <h2 class="card-title mb-3">Desarrollador Fullstack Junior</h2>
+                        <h6 class="card-subtitle text-secondary mb-1">Contaline ERP</h6>
+                        <p class="card-text m-0">Desarrollo de módulos para facturación electrónica, factoring, notas de venta y visualización de reportes en ERP.</p>
+                        <!-- Aptitudes: Git · Scrum · JavaScript · Desarrollo de software -->
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </section>
-
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills" data-id="skills">
-                <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">Technical Competence</span>
-
-                <div class="skills__container container grid">
-                    <div>
-                        <!--==================== SKILLS 1 ====================-->
-                        <div class="skills__content skills__open">
-                            <div class="skills__header">
-                                <i class="uil uil-brackets-curly skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__titles">Programming language </h1>
-                                    <span class="skills__subtitle">More than 8 years</span> 
-                                </div>
-
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-
-                                <!-- <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">SNAP</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div> -->
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">R</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Javascript</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Java</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">C/C++/C#</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">.NET</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">SQL</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">MATLAB</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">HTML/CSS</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__sys-code"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--==================== SKILLS 2 ====================-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-vector-square skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__titles">Frameworks</h1>
-                                    <span class="skills__subtitle">More than 4 years</span> 
-                                </div>
-
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Keras</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__80"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name"> Pytorch (GPU/CPU)</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Tensorflow</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Scikit learn</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Numpy</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">OpenCV</h3>
-                                        <span class="skills__number">Beginner</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">Pandas
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__titles">Simulink
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <div class="skills__titles">App Designer
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">Flask/Django
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>                        
+              </li>
+              
+              <li class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-body">
+                  <div class="timeline-content timeline-indicator">
+                    <div class="card border-0 shadow">
+                      <div class="card-body p-xl-4">
+                        <h5 class="card-subtitle text-secondary mb-1">ABR 2018 - SEP 2019</h5>
+                        <h2 class="card-title mb-3">Tutor de programación e informática</h2>
+                        <h6 class="card-subtitle text-secondary mb-1">Gabriel González Videla | Liceo Comercial | Comeduc</h6>
+                        <p class="card-text m-0">Tutor encargado de taller de informática y guía de aprendizaje en introducción a las TIC, introducción y fundamentos de programación básica para alumnos de educación media utilizando herramientas de gamificación y desarrollo de aplicaciones en dispositivos móviles.</p>
+                      </div>
                     </div>
-
-                    <div>
-                        <!--==================== SKILLS 3 ====================-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-arrow skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__titles">Data</h1>
-                                    <span class="skills__subtitle">Visualization, Analysis, Dashboard</span>
-                                </div>
-
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Plotly</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__60"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Matplotlib</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Seaborn</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">PowerBI/DAX</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Tableu</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Excel</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Loocker Studio</h3>
-                                        <span class="skills__number">Intermediate</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
-                                    </div>
-                                </div>
-
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">MariaDB / MySQLworkbench/ MongoDB</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__40"></span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>  
-
-                        <!--==================== SKILLS 4 ====================-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-code-branch skills__icon"></i>
-
-                                <div>
-                                    <h1 class="skills__titles">Miscellaneous </h1>
-                                    <span class="skills__subtitle">More than 2 years</span>
-                                </div>
-
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">DOS/UNIX</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__20"></span>
-                                    </div>
-                                </div>
-
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Git/GitHub</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__60"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">MS Office</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__100"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Design patterns</h3>
-                                        <span class="skills__number">Advanced</span> 
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percantage skills__100"></span>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>  
-
-                    </div> 
+                  </div>
                 </div>
-            </section>
-
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
-                <h2 class="section__title">Qualifications</h2>
-                <span class="section__subtitle">Academic and Professional Career</span>
-
-                <div class="qualification__container container">
-                    <div class="qualification__tabs">
-                        <div class="qualification__button button--flex qualification__active" data-target="#education">
-                            <i class="uil uil-graduation-cap qualification__icon"></i>
-                            Education
-                        </div>
-
-                        <div class="qualification__button button--flex" data-target="#work">
-                            <i class="uil uil-briefcase-alt qualification__icon"></i>
-                            Work
-                        </div>
+              </li>
+              <li class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-body">
+                  <div class="timeline-content timeline-indicator">
+                    <div class="card border-0 shadow">
+                      <div class="card-body p-xl-4">
+                        <h5 class="card-subtitle text-secondary mb-1">ENE 2011 - DIC 2017</h5>
+                        <h2 class="card-title mb-3">Suboficial de Ejército</h2>
+                        <h6 class="card-subtitle text-secondary mb-1">Ejército de Chile | Escuela de Suboficiales | Escuela de Caballería Blindada</h6>
+                        <p class="card-text m-0">Instructor militar mención Caballería Blindada, operador de vehículos blindados y encargado de seguridad interna.</p>
+                      </div>
                     </div>
-                    <div class="qualification__sections">
-                        <!--==================== QUALIFICATION CONTENT 1 ====================-->
-                        <div class="qualification__content qualification__active" data-content="" id="education">
-                             <!--==================== QUALIFICATION  1 ====================-->
-                             <div class="qualification__data">
-                                <div>
-                                    <span class="qualification__degree">B.Sc.</span>
-                                    <h3 class="qualification__tittle">Computer Systems Engineer</h3>
-                                    <span class="qualification__subtitle">Instituto tecnologico de Querétaro</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2013 - 2018
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                             <!--==================== QUALIFICATION  2 ====================-->
-                             <div class="qualification__data">
-                                <div></div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__degree">M.Sc.</span>
-                                    <h3 class="qualification__tittle">Artificial Intelligence</h3>
-                                    <span class="qualification__subtitle">Universidad Autónoma de Querétaro</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2018 - 2020
-                                    </div>
-                                </div>
-
-                            </div>
-
-                             <!--==================== QUALIFICATION  3 ====================-->
-                             <div class="qualification__data">
-                                <div>
-                                    <span class="qualification__degree">Ph.D.</span>
-                                    <h3 class="qualification__tittle">Engineering</h3>
-                                    <span class="qualification__subtitle">Universidad Autónoma de Querétaro</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2021 - Present
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <!-- <span class="qualification__line"></span> -->
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!--==================== QUALIFICATION CONTENT 2 ====================-->
-                        <div class="qualification__content" data-content="" id="work">
-                            <!--==================== QUALIFICATION  1 ====================-->
-                            <div class="qualification__data">
-                               <div>
-                                   <h3 class="qualification__tittle">Software developer and researcher</h3>
-                                   <span class="qualification__subtitle">Universidad Autónoma de Querétaro</span>
-                                   <div class="qualification__calendar">
-                                       <i class="uil uil-calendar-alt"></i>
-                                       2018-2023
-                                   </div>
-                               </div>
-                               <div>
-                                   <span class="qualification__rounder"></span>
-                                   <span class="qualification__line"></span>
-                               </div>
-                           </div>
-
-                            <!--==================== QUALIFICATION  2 ====================-->
-                            <div class="qualification__data">
-                               <div></div>
-                               <div>
-                                   <span class="qualification__rounder"></span>
-                                   <span class="qualification__line"></span>
-                               </div>
-
-                               <div>
-                                   <h3 class="qualification__tittle">Professor of the Department of Systems Engineering</h3>
-                                   <span class="qualification__subtitle">Instituto Tecnológico de Querétaro </span>
-                                   <div class="qualification__calendar">
-                                       <i class="uil uil-calendar-alt"></i>
-                                       2021 - 2023
-                                   </div>
-                               </div>
-
-                           </div>
-
-                            <!--==================== QUALIFICATION  3 ====================-->
-                            <div class="qualification__data">
-                               <div>
-                                   <h3 class="qualification__tittle">Artificial intelligence consultant</h3>
-                                   <span class="qualification__subtitle">Freelancer</span>
-                                   <div class="qualification__calendar">
-                                       <i class="uil uil-calendar-alt"></i>
-                                       2020 - 2023
-                                   </div>
-                               </div>
-                               <div>
-                                   <span class="qualification__rounder"></span>
-                                   <span class="qualification__line"></span>
-                               </div>
-                           </div>
-
-                               <!--==================== QUALIFICATION  4 ====================-->
-                            <div class="qualification__data">
-                               <div>
-                                   <h3 class="qualification__tittle">Fraud analyst</h3>
-                                   <span class="qualification__subtitle">Santander México</span>
-                                   <div class="qualification__calendar">
-                                       <i class="uil uil-calendar-alt"></i>
-                                       2024 - Actual
-                                   </div>
-                               </div>
-                               <div>
-                                   <span class="qualification__rounder"></span>
-                                   <span class="qualification__line"></span>
-                               </div>
-                           </div>
-                           
-
-                       </div>
-
-                    </div>
+                  </div>
                 </div>
-            </section>
-
-            <!--==================== PROJECTS ====================-->
-            <section class="projects section" id="projects" data-id="projects">
-                <h2 class="section__title">Projects</h2>
-                <span class="section__subtitle">Involved Projects</span>
-
-                <div class="projects__container container grid">
-                    <!--==================== PROJECTS 1 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">IoT Based Ambient Monitoring System</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title"> IoT Based Ambient Monitoring System for Intelligent Buildings  </h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Literature and Technology Review</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Embedded systems based on the Internet of Things format for monitoring physical
-                                            variables</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Study of electrical energy consumption in HVAC systems</p>
-                                    </li>
-
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Lightweight protocols for IoT and embedded systems: MQTT</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> 
-
-                    <!--==================== PROJECTS 2 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">Face detection</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Face detection for efficient video-surveillance IoT based embedded system</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Embedded systems based on the Internet of Things</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Detection of features in faces with embedded systems</p>
-                                    </li>
-
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Automatic bot to send security alerts</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>         
-
-                    <!--==================== PROJECTS 3 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">Blockchain</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Blockchain Mechanism and Symmetric Encryption in A Wireless Sensor Network</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Design and development of custom blockchain mechanism for embedded systems</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Implementation of symmetric encryption algorithm in embedded systems</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Dashboard development to monitor the behavior of environmental variables</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--==================== PROJECTS 4 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">Deep Neural Networks</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">A Novel Methodology for Classifying Electrical Disturbances Using Deep Neural Networks</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Design and development of a system for generating electrical disturbances</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Implementation of algorithm for extraction of characteristics from analog signals</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Training, validation and testing of multiple convolutional neural network for classification and analysis of electrical disturbances</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Simulation in simulink of electric microgrid with renewable generators for additional tests</p>
-                                    </li>      
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!--==================== PROJECTS 5 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">SAC</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Simulation and analysis of DC-DC converters for distributed generator systems for renewable energy</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Literature Survey on Simulation and analysis of DC-DC converters.</p>
-                                    </li>
-                                        
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Intelligent control with fuzzy logic.</p>
-                                    </li>
-                                        
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>MPPT control.</p>
-                                    </li>
-
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Voltage controller design system for renewable generators.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!--==================== PROJECTS 6 ====================-->
-                    <div class="projects__content">
-                        <div>
-                            <i class="uil uil-swatchbook projects__icon"></i>
-                            <h3 class="projects__title">Feature analysis</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link projects__button">
-                            View More
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <h4 class="projects__modal-title">Analysis of attribute characteristics with machine learning</h4>
-                                <i class="uil uil-times projects__modal-close"></i>
-
-                                <ul class="projects__modal-projects grid">
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Extract Transform Load (ETL)</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>Random forrest</p>
-                                    </li>
-                                    <li class="projects__modal-project">
-                                        <i class="uil uil-check-circle projects__modal-icon"></i>
-                                        <p>correlation analysis with crammer</p>
-                                    </li>  
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!--==================== PAPERS ====================-->
-            <section class="paper section" id="paper" data-id="paper">
-                <h2 class="section__title">Papers</h2>
-                <span class="section__subtitle">Published Papers</span>
-                
-                <div class="paper__container container swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-css-mode">
-                    <div class="swiper-wrapper" id="swiper-wrapper-10e7861f61ef9aae" aria-live="polite"><div class="paper__content grid swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" style="width: 768px;" role="group" aria-label="5 / 5">
-                            <img src="assets/img/paper_class.png" alt="MARS-KS, GOTHIC, CUPID, and CFX codes comparison on COPAIN test facility" class="paper__img">
-
-                            <div class="paper__dat">
-                                <h3 class="paper__title">Electrical Disturbances</h3>
-                                <p class="paper__description"></p>
-                                <a href="https://www.researchgate.net/publication/371753326_A_Novel_Methodology_for_Classifying_Electrical_Disturbances_Using_Deep_Neural_Networks" target="_blank" class="button button--flex button--small paper__button">
-                                    Read
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <!--==================== PAPER 1 ====================-->
-                        <div class="paper__content grid swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 768px;" role="group" aria-label="1 / 5">
-                            <img src="assets/img/paper_1.png" alt="CFD code OpenFOAM mesh for pool scrubbing geometry" class="paper__img">
-
-                            <div class="paper__dat">
-                                <h3 class="paper__title"> Intelligent Buildings</h3>
-                                <p class="paper__description">An IoT based monitoring system for ambient variables in intelligent Buildings is presented. 
-                                    Variables considered are temperature, relative humidity and carbon dioxide concentration. 
-                                    The developed system has proven to be efficient, versatile and affordable.</p>
-                                <a href="https://www.researchgate.net/publication/330391366_IoT_Based_Ambient_Monitoring_System_for_Intelligent_Buildings" target="_blank" class="button button--flex button--small paper__button">
-                                    Read
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>  
-
-                        <!--==================== PAPER 2 ====================-->
-                        <div class="paper__content grid swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 768px;" role="group" aria-label="2 / 5">
-                            <img src="assets/img/paper2.jpg" alt="Small modular reactor containment pressure and radioactivity" class="paper__img">
-
-                            <div class="paper__dat">
-                                <h3 class="paper__title">Face detection</h3>
-                                <p class="paper__description">Design and 
-development of an embedded system for intelligent video 
-surveillance with IoT capabilities is presented.</p>
-                                <a href="https://www.researchgate.net/publication/330394259_Face_detection_for_efficient_video-surveillance_IoT_based_embedded_system" target="_blank" class="button button--flex button--small paper__button">
-                                    Read
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>   
-
-                        <!--==================== PAPER 3 ====================-->
-                        <div class="paper__content grid swiper-slide" data-swiper-slide-index="2" style="width: 768px;" role="group" aria-label="3 / 5">
-                            <img src="assets/img/wireles.png" alt="Integral experiment test facility" class="paper__img">
-
-                            <div class="paper__dat">
-                                <h3 class="paper__title">Wireless Sensor Network</h3>
-                                <p class="paper__description">Blockchain Mechanism and Symmetric Encryption in
-                                    A Wireless Sensor Network</p>
-                                <a href="https://www.researchgate.net/publication/341395119_Blockchain_Mechanism_and_Symmetric_Encryption_in_A_Wireless_Sensor_Network" target="_blank" class="button button--flex button--small paper__button">
-                                    Read
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>                       
-
-                        <!--==================== PAPER 4 ====================-->
-                        <div class="paper__content grid swiper-slide" data-swiper-slide-index="3" style="width: 768px;" role="group" aria-label="4 / 5">
-                            <img src="assets/img/Perturbaciones-min.png" alt="Wall condensation experiment" class="paper__img">
-
-                            <div class="paper__dat">
-                                <h3 class="paper__title">Micro smart grids</h3>
-                                <p class="paper__description">Artificial intelligence applied for micro smart grids: a literature review 
-                                    - Latin American Applied Research
-                                </p>
-                            </div>
-                        </div> 
-
-                        <!--==================== PAPER 5 ====================-->
-                        <div class="paper__content grid swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="4" style="width: 768px;" role="group" aria-label="5 / 5">
-                            <img src="assets/img/paper_class.png" alt="MARS-KS, GOTHIC, CUPID, and CFX codes comparison on COPAIN test facility" class="paper__img">
-
-                            <div class="paper__dat">
-                                <h3 class="paper__title">Electrical Disturbances</h3>
-                                <p class="paper__description"></p>
-                                <a href="https://www.researchgate.net/publication/371753326_A_Novel_Methodology_for_Classifying_Electrical_Disturbances_Using_Deep_Neural_Networks" target="_blank" class="button button--flex button--small paper__button">
-                                    Read
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>                        
-
-                    <div class="paper__content grid swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 5" style="width: 768px;">
-                            <img src="assets/img/paper_1.png" alt="CFD code OpenFOAM mesh for pool scrubbing geometry" class="paper__img">
-
-                            <div class="paper__dat">
-                                <h3 class="paper__title"> Intelligent Buildings</h3>
-                                <p class="paper__description">An IoT based monitoring system for ambient variables in intelligent Buildings is presented. 
-                                    Variables considered are temperature, relative humidity and carbon dioxide concentration. 
-                                    The developed system has proven to be efficient, versatile and affordable.</p>
-                                <a href="https://www.researchgate.net/publication/330391366_IoT_Based_Ambient_Monitoring_System_for_Intelligent_Buildings" target="_blank" class="button button--flex button--small paper__button">
-                                    Read
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div></div>
-
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-10e7861f61ef9aae">
-                            <i class="uil uil-angle-right-b swiper-paper-icon"></i>
-                        </div>
-                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-10e7861f61ef9aae">
-                            <i class="uil uil-angle-left-b swiper-paper-icon"></i>
-                        </div>
-
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span></div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-            </section>
-
-
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section" id="testimonials">
-                <h2 class="section__title">References</h2>
-                
-
-                <div class="testimonial__container container swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
-                    <div class="swiper-wrapper" style="cursor: grab; transform: translate3d(-816px, 0px, 0px); transition-duration: 0ms;" id="swiper-wrapper-106ffe10ef951f3b2" aria-live="polite"><div class="testimonial__content swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 360px; margin-right: 48px;" role="group" aria-label="1 / 2">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/edgar.png" alt="" class="testimonial__img">
-
-                                    <div>
-                                        <h3 class="testimonial__name">Dr. Edgar Rivas</h3>
-                                        <span class="testimonial__client">UAQ, Research Professor</span>
-                                        <div class="about__buttons">
-                            <a download="" href="assets/pdf/carta de recomendación_1.pdf" class="button button--flex">
-                                Recommendation letter<i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div> -->
-                            </div>
-                           
-                         </div><div class="testimonial__content swiper-slide swiper-slide-duplicate swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 360px; margin-right: 48px;" role="group" aria-label="2 / 2">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/MAIRNAO.png" alt="" class="testimonial__img">
-
-                                    <div>
-                                        <h3 class="testimonial__name">Dr. Mariano Garduño</h3>
-                                        <span class="testimonial__client">UAQ, Research Professor</span>
-                                        <div class="about__buttons">
-                                            <a download="" href="assets/pdf/carta jefe rivas.pdf" class="button button--flex">
-                                               Recommendation letter<i class="uil uil-download-alt button__icon"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div> -->
-                            </div>
-                           
-                    </div>
-                         <!--==================== TESTIMONIAL 1 ====================-->
-                         <div class="testimonial__content swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 360px; margin-right: 48px;" role="group" aria-label="1 / 2">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/edgar.png" alt="" class="testimonial__img">
-
-                                    <div>
-                                        <h3 class="testimonial__name">Dr. Edgar Rivas</h3>
-                                        <span class="testimonial__client">UAQ, Research Professor</span>
-                                        <div class="about__buttons">
-                            <a download="" href="assets/pdf/carta de recomendación_1.pdf" class="button button--flex">
-                                Recommendation letter<i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div> -->
-                            </div>
-                           
-                         </div>
-                         
-                         <!--==================== TESTIMONIAL 2 ====================-->
-                         <div class="testimonial__content swiper-slide swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="width: 360px; margin-right: 48px;" role="group" aria-label="2 / 2">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/MAIRNAO.png" alt="" class="testimonial__img">
-
-                                    <div>
-                                        <h3 class="testimonial__name">Dr. Mariano Garduño</h3>
-                                        <span class="testimonial__client">UAQ, Research Professor</span>
-                                        <div class="about__buttons">
-                                            <a download="" href="assets/pdf/carta jefe rivas.pdf" class="button button--flex">
-                                               Recommendation letter<i class="uil uil-download-alt button__icon"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div> -->
-                            </div>
-                           
-                    </div>
-
-                    
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination swiper-pagination-testimonial swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-bullets-dynamic" style="width: 80px;"><span class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true" style="left: 8px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" tabindex="0" role="button" aria-label="Go to slide 2" style="left: 8px;"></span></div>
-                <div class="testimonial__content swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 360px; margin-right: 48px;" role="group" aria-label="1 / 2">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/edgar.png" alt="" class="testimonial__img">
-
-                                    <div>
-                                        <h3 class="testimonial__name">Dr. Edgar Rivas</h3>
-                                        <span class="testimonial__client">UAQ, Research Professor</span>
-                                        <div class="about__buttons">
-                            <a download="" href="assets/pdf/carta de recomendación_1.pdf" class="button button--flex">
-                                Recommendation letter<i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div> -->
-                            </div>
-                           
-                         </div><div class="testimonial__content swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 2" style="width: 360px; margin-right: 48px;">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/MAIRNAO.png" alt="" class="testimonial__img">
-
-                                    <div>
-                                        <h3 class="testimonial__name">Dr. Mariano Garduño</h3>
-                                        <span class="testimonial__client">UAQ, Research Professor</span>
-                                        <div class="about__buttons">
-                                            <a download="" href="assets/pdf/carta jefe rivas.pdf" class="button button--flex">
-                                               Recommendation letter<i class="uil uil-download-alt button__icon"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div> -->
-                            </div>
-                           
-                    </div></div>
-            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></section>
-
-           
-
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact" data-id="contact">
-               
-                
-
-                <div class="contact__container container grid">
-                    <div>
-                        <h2 class="section__title">Contact Me</h2>
-                        <div class="contact__information">
-                            <i class="uil uil-phone contact__icon"></i>
-
-                            <div>
-                                <h3 class="contact__title">Call Me</h3>
-                                <span class="contact__subtitle">+52 4422873795</span>
-                            </div>
-                        </div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-envelope contact__icon"></i>
-
-                            <div>
-                                <h3 class="contact__title">Email</h3>
-                                
-                                <p><a class="contact__subtitle" href="mailto:eliza_xeww@hotmail.com">eliza_xeww@hotmail.com</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-
-                            <div>
-                                <h3 class="contact__title">Location</h3>
-                                <span class="contact__subtitle">México, Querétaro</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <div class="footer__bg">
-                <div class="footer__container container grid">
-                    <div>
-                        <a href="#" class="footer__title">Alma Guerrero</a><br>
-                        <span class="footer__subtitle">Systems engineering and master in artificial intelligence</span>
-                    </div>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#projects" class="footer__link">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#paper" class="footer__link">Papers</a>
-                        </li>
-                        <li>
-                            <a href="#testimonials" class="footer__link">References</a>
-                        </li>
-                        <li>
-                            <a href="#videos" class="footer__link">Videos</a>
-                        </li>
-                        <li>
-                            <a href="#meeting" class="footer__link">Meeting</a>
-                        </li>
-                        <li>
-                            <a href="#presentation" class="footer__link">Presentations</a>
-                        </li>
-                    </ul>
-
-                    <div class="footer__socials">
-                        <a href="https://www.linkedin.com/in/alma-guerrero/" target="_blank" class="footer__social">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-
-                        <a href="https://www.researchgate.net/profile/Alma-Guerrero-5" target="_blank" class="footer__social">
-                            <i class="uil uil-book-open"></i>
-                        </a>
-
-                        <a href="https://github.com/almaguerrero" target="_blank" class="footer__social">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-
-                    </div>
-                </div>
-
-                <p class="footer__copy">© All rights reserved.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="experiencia seccion-clara">
+      <h2 class="seccion-titulo texto-negro">Trabajos y Ejecuciones</h2>
+      <h2 class="seccion-descripcion mb-5">Mis Servicios</h2>
+      <div class="container text-center">
+        <div class="row">
+          <!-- Desarrollo Web -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i>
+            <p class="experiencia-titulo">Desarrollo Web</p>
+            <p> Desarrollo de sitios | SEO | Web Apps | Plataformas</p>
+            <div class="badges-contenedor">
+              <span class="badge text-bg-primary">Optimizado para SEO</span>
+              <span class="badge text-bg-primary">Responsive</span>
+              <span class="badge text-bg-primary">Escalable</span>
+              <span class="badge text-bg-primary">Seguridad Incluida</span>
             </div>
-        </footer>
+          </div>
+          <!-- Asesorías -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i>
+            <p class="experiencia-titulo">Asesorías TI para tu negocio</p>
+            <p>Análisis | Automatización de procesos | Optimización de recursos</p>
+            <div class="badges-contenedor">
+              <span class="badge text-bg-primary">Automatización</span>
+              <span class="badge text-bg-primary">Análisis Estratégico</span>
+              <span class="badge text-bg-primary">Optimización de Costos</span>
+              <span class="badge text-bg-primary">Transformación Digital</span>
+              <span class="badge text-bg-primary">Soluciones Personalizadas</span>
+              
+            </div>
+          </div>
+          <!-- Integraciones -->
+          <div class="columna col-12 col-md-4">
+            <i class="bi bi-laptop"></i>
+            <p class="experiencia-titulo">Integraciones</p>
+            <p> Herramientas externas | Compatibilidad IoT | Domótica</p>
+            <div class="badges-contenedor">
+              <span class="badge text-bg-primary">Automatización Avanzada</span>
+              <span class="badge text-bg-primary">Pasarelas de pago</span>
+              <span class="badge text-bg-primary">Microcontroladores</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+      <h2 class="seccion-titulo texto-negro">Mis proyectos recientes</h2>
+      <h3 class="seccion-descripcion">Estos son algunos proyectos que he creado recientemente...</h3>
+      <!-- Galeria de Proyectos -->
+      <div class="container text-center proyectos-contenedor">
+        <div class="row">
+          <!-- Proyecto 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="imagenes/PRO1.png">
+              <img src="imagenes/PRO1.png" alt="Proyecto 1">
+              <div class="overlay">
+                <p class="titulo-mp mb-3">Sistema de Administración</p>
+                <div class="iconos-contenedor">
+                  Proyecto enfocado a la administración de clientes recurrentes, bodegas y existencias físicas.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Proyecto 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="imagenes/proyecto2.png">
+              <img src="imagenes/proyecto2.png" alt="Proyecto 2">
+              <div class="overlay">
+                <p class="titulo-mp mb-3">Dashboard flujo de datos</p>
+                <div class="iconos-contenedor">
+                  Plataforma para la centralización, registro y visualización de datos en tiempo real, emitidos por microcontroladores ESP32-ESP8266 y sensores BME280: Presión atmosférica, temperatura y humedad ambiental.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Proyecto 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="imagenes/PRO2.png">
+              <img src="imagenes/PRO2.png" alt="Proyecto 3">
+              <div class="overlay">
+                <p class="titulo-mp mb-3">Generador de Notas de Venta</p>
+                <div class="iconos-contenedor">
+                  Módulo que a través de pedidos realizados por clientes, genera un documento PDF descargable con el detalle de los insumos, porcentajes, cantidades y valores totales.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
-        <!--==================== SCROLL TOP ====================-->
-        <a href="" class="scrollup show-scroll" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade " id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <img id="modalImage" src="" alt="Imagen del proyecto" class="img-fluid w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonios seccion-clara">
+      <h2 class="seccion-titulo">Testimonios</h2>
+      <h3 class="seccion-descripcion">Estos son algunos testimonios de mis clientes...</h3>
+      
+      <!-- Carrusel -->
+      <div id="testimonios-carrusel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="imagenes/cliente1.svg" alt="Foto de Gino">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="testimonio-info">
+                <p class="cliente">Gino</p>
+                <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="imagenes/cliente2.svg" alt="Foto de Nora">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="testimonio-info">
+                <p class="cliente">Nora</p>
+                <p class="cargo">Gerente de DiseñaMiPáginaWeb</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <img class="testimonio-imagen rounded-circle" src="imagenes/cliente3.svg" alt="Foto de Leonardo">
+              <p class="testimonio-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel iaculis urna. Fusce a ornare enim, vel interdum turpis. Sed aliquam interdum nisi a placerat.</p>
+              <div class="testimonio-info">
+                <p class="cliente">Leonardo</p>
+                <p class="cargo">Director de AprendeAProgramar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto seccion-oscura">
+      <div class="container">
+        <div class="container text-center rectangulo d-flex justify-content-evenly">
+          <div class="row">
+            <div class="col-12 col-md-4 seccion-titulo">
+              ¡Hablemos!
+            </div>
+            <div class="col-12 col-md-4 descripcion">
+              Contáctame para iniciar tu idea o proyecto, y haremos que tu visión se vuelva realidad.
+            </div>
+            <div class="col-12 col-md-4">
+              <a href="mailto:daniel.aracenach@gmail.com">
+                <button type="button">  
+                  Contacto
+                  <i class="bi bi-envelope-check-fill"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pie de pagina (footer) -->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center"> 
+      <img class="footer-logo" src="imagenes/icono-blanco.svg" alt="Logo del portafolio">
+      <p class="footer-texto text-center">Aprendo y creo todos los días.<br>Creemos un proyecto juntos.</p>
+      <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+        <a href="https://twitter.com/freecodecampES" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-twitter"></i>
         </a>
+        <a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/freecodecamp/" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="mailto:janedoe@micorreo.com" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+      <div class="derechos-de-autor">Creado por Daniel Aracena (2024) &#169;</div>
+    </footer>
 
-        <!--==================== SWIPER JS ====================-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-        <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
+  <script>
+
+    AOS.init({
+      duration: 1000, // Duración de la animación en milisegundos
+      once: true,     // Ejecutar la animación solo una vez
+    });
+
+    // document.addEventListener('click', function (event) {
+    //   const target = event.target.closest('.proyecto');
+    //   if (target && target.dataset.image) {
+    //     const imageUrl = target.dataset.image;
+    //     const modalImage = document.getElementById('modalImage');
+    //     modalImage.src = imageUrl; // Actualizar la imagen del modal
+    //   }
+    // });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const modalImage = document.getElementById('modalImage');
+    
+    // Inicializar Panzoom
+    Panzoom(modalImage, {
+      maxScale: 4, // Zoom máximo permitido
+      minScale: 1, // No permitir reducción por debajo del tamaño original
+      contain: 'inside',
+    });
+
+    // Actualizar la imagen del modal dinámicamente al hacer clic en los proyectos
+    document.addEventListener('click', function (event) {
+      const target = event.target.closest('.proyecto');
+      if (target && target.dataset.image) {
+        const imageUrl = target.dataset.image;
+        // const modalImage = document.getElementById('modalImage');
+        modalImage.src = imageUrl; // Actualizar la imagen del modal
+      }
+    });
+  });
+
     
 
-</body></html>
+
+  </script>
+  
+  </body>
+</html>
