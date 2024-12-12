@@ -507,6 +507,10 @@ footer {
 /* Custom */
 
 
+a {
+  text-decoration: none;
+}
+
 .custom-badge {
   background-color: #4779ff; 
   color: white; 
