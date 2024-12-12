@@ -502,3 +502,196 @@ footer {
 .bsb-timeline-3 .timeline:after {
     background-color: rgba(0, 0, 0, 0.493)!important;
 }
+
+
+/* Custom */
+
+
+.custom-badge {
+  background-color: #4779ff; 
+  color: white; 
+  cursor: pointer;
+}
+
+.sobre-1{
+  margin-top: 0vh;
+}
+
+.stack-1{
+  margin-top: 2vh;
+}
+
+.sobre-mi {
+    height: 100vh;
+    padding: 10px;
+}
+
+.sobre-mi-1{
+   font-size: 3vw;
+}
+
+.sobre-mi-2{
+  font-size: 27px;
+}
+
+.sobre-mi .contenedor {
+    max-width: 42vw;
+    text-align: center;
+}
+
+.mi-stack {
+    margin-top: 5rem;
+    font-size: 39px;
+}
+
+.img-stack img {
+    width: 3vw;
+    height: 8vh;
+}
+
+/* .right{
+  width: 40vw!important;
+} */
+
+
+.card-title {
+  font-size: 25px;
+}
+
+.card-subtitle{
+  font-size: 17px;
+  margin-bottom: 0.3rem!important;
+}
+
+
+.iconos-contenedor {
+  text-align: justify;
+  width: 17vw;
+}
+
+#modalImage {
+    width: 120vh !important;
+    height: 75vh;
+}
+
+.carousel-item {
+
+    transition: transform .8s ease-in-out!important;
+}
+
+.rrss {
+  font-size: 1.5rem;
+}
+
+.carousel-inner {
+  height: 60vh;
+}
+
+/* Responsivo */
+@media (max-width: 430px) {
+  #modalImage {
+    width: 100vh !important;
+    height: 40vh;
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+    cursor: zoom-in; /* Indica que se puede hacer zoom */
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 0.3rem 0rem 0rem 0rem;
+  
+  }
+
+  .hero-principal {
+      width: 100vw;
+  }
+
+  .hero-principal h2 {
+      font-size: 1rem;
+      color: #615151;
+  }
+
+  .hero-principal {
+      padding: 2rem 0rem 2rem 0rem;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+    
+  }
+
+
+  .seccion-titulo {
+    font-size: 3rem;
+  }
+
+  .sobre-mi {
+     height: 105vh;
+  }
+
+  .sobre-mi-1 {
+      font-size: 10vw;
+      padding: 0px 0;
+  }
+
+
+  .sobre-mi .contenedor {
+      max-width: 90vw;
+      text-align: center;
+  }
+
+  .sobre-mi-2 {
+      font-size: 15px;
+      text-align: justify;
+  }
+
+  .mi-stack {
+      margin-top: 1rem;
+      font-size: 39px;
+  }
+
+  .img-stack img {
+      width: 12vw;
+      height: 8vh;
+  }
+
+  .overlay{
+      opacity: 1;
+  }
+  .proyecto img{
+      opacity: 0.2;
+  }
+
+  .iconos-contenedor {
+      text-align: justify;
+      width: 60vw;
+      font-size: 14px;
+  }
+
+  .titulo-mp{
+      font-size: 15px!important;
+  }
+
+  .proyectos-recientes img{
+      height:35vh;
+  }
+
+  .carousel-item .container {
+      width: 106vw!important;
+  }
+
+  .testimonio-texto {
+    text-align: justify;
+    width: 74vw;
+    font-size: 13px;
+  }
+
+  .carousel-inner {
+    height: 80vh;
+  }
+
+
+}
