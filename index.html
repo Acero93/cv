@@ -227,11 +227,19 @@
           // create/select the notification container near the end of body
           let bubble = document.querySelector('.notification-bubble');
           if (!bubble) {
-            bubble = document.createElement('div');
-            bubble.className = 'notification-bubble';
-            bubble.setAttribute('aria-live', 'polite');
-            bubble.setAttribute('aria-atomic', 'true');
-            document.body.appendChild(bubble);
+              bubble = document.createElement('div');
+              bubble.className = 'notification-bubble';
+              bubble.setAttribute('aria-live', 'polite');
+              bubble.setAttribute('aria-atomic', 'true');
+              // Estructura interna: título visible y contenedor para el mensaje
+              const titleEl = document.createElement('div');
+              titleEl.className = 'notification-title';
+              titleEl.textContent = 'Mis intereses y hobbies';
+              const msgEl = document.createElement('div');
+              msgEl.className = 'notification-message';
+              bubble.appendChild(titleEl);
+              bubble.appendChild(msgEl);
+              document.body.appendChild(bubble);
           }
 
           const messages = [
@@ -276,7 +284,8 @@
           function showOnce() {
             const text = pickRandom();
             if (!text) return;
-            bubble.textContent = text;
+            const msgEl = bubble.querySelector('.notification-message');
+            if (msgEl) msgEl.textContent = text;
             bubble.classList.add('visible');
             // announce to screen readers by updating aria-live (already set)
             const visibleDuration = prefersReduced ? 3500 : 4200;

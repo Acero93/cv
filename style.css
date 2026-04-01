@@ -233,6 +233,41 @@ h1 {
   }
 }
 
+/* Título y mensaje dentro de la notificación */
+.notification-bubble .notification-title {
+  font-weight: 700;
+  color: #ff7a59; /* color agradable y visible */
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+}
+.notification-bubble .notification-message {
+  font-weight: 500;
+  color: inherit;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  /* Pantallas medianas y pequeñas, hacer título más discreto */
+  .notification-bubble .notification-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .notification-bubble .notification-title {
+    font-size: 0.85rem;
+    margin-bottom: 0.15rem;
+  }
+  .notification-bubble .notification-message {
+    font-size: 0.82rem;
+  }
+}
+
+/* Dark/background-aware adjustments */
+.seccion-oscura .notification-bubble .notification-title {
+  color: #ffd6c2; /* tono claro sobre fondo oscuro */
+}
+
 /* If dark background in section, invert the bubble colors */
 .seccion-oscura .notification-bubble {
   background: #0b1220;
