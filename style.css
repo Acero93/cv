@@ -126,6 +126,47 @@ h1 {
   box-shadow: 0 8px 32px rgba(71, 121, 255, 0.18);
 }
 
+/* Animación de entrada para la imagen del hero */
+.enter-image {
+  opacity: 0;
+  transform: translateY(18px) scale(0.96);
+}
+.enter-image.in-view {
+  animation: imageEnter 750ms cubic-bezier(.2,.9,.24,1) forwards;
+}
+
+@keyframes imageEnter {
+  0% { opacity: 0; transform: translateY(18px) scale(0.96); }
+  60% { opacity: 1; transform: translateY(-6px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Animación de entrada para el título principal */
+.enter-title {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px) scale(0.995);
+}
+.enter-title.in-view {
+  animation: titleEnter 820ms cubic-bezier(.18,.9,.28,1) forwards;
+}
+
+@keyframes titleEnter {
+  0% { opacity: 0; transform: translateY(10px) scale(0.995); }
+  60% { opacity: 1; transform: translateY(-4px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Stagger: si ambos tienen la clase in-view al aparecer, retrasar el título ligeramente */
+.hero-principal .enter-image.in-view + .enter-title.in-view,
+.hero-principal .enter-title.in-view {
+  animation-delay: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter-image, .enter-title { animation: none !important; transform: none !important; opacity: 1 !important; }
+}
+
 .hero-principal h1 {
   font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   margin-bottom: 0.5rem;

@@ -107,6 +107,32 @@
           splitChars(el);
           el.dataset.chars = 'true';
         });
+
+        // Entrada animada para la imagen y el título del hero
+        const toObserve = [];
+        const img = document.querySelector('.hero-imagen-desarrollador');
+        const title = document.querySelector('.hero-principal h1');
+        if (img) {
+          img.classList.add('enter-image');
+          toObserve.push(img);
+        }
+        if (title) {
+          title.classList.add('enter-title');
+          toObserve.push(title);
+        }
+
+        if (toObserve.length) {
+          const obs = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.2 });
+
+          toObserve.forEach(el => obs.observe(el));
+        }
       });
     </script>
 
