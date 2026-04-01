@@ -125,16 +125,27 @@
         if (toObserve.length) {
           const obs = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
+              if (!entry.isIntersecting) return;
 
-                // Si el elemento observado es el título, arrancar el efecto de tipeo
-                if (entry.target.matches('.hero-principal h1')) {
-                  startTypingOnTitle();
-                }
+              const target = entry.target;
 
-                observer.unobserve(entry.target);
+              // Si es la imagen de perfil, aplicar un retraso configurable antes de mostrar
+              if (target.matches('.hero-imagen-desarrollador')) {
+                const delay = parseInt(target.dataset.enterDelay || target.getAttribute('data-enter-delay') || '1500', 10);
+                setTimeout(() => {
+                  target.classList.add('in-view');
+                }, delay);
+                observer.unobserve(target);
+                return;
               }
+
+              // Si el elemento observado es el título, arrancar el efecto de tipeo
+              target.classList.add('in-view');
+              if (target.matches('.hero-principal h1')) {
+                startTypingOnTitle();
+              }
+
+              observer.unobserve(target);
             });
           }, { threshold: 0.2 });
 
