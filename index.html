@@ -63,7 +63,6 @@
       <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
         <div class="profile-wrap">
           <img class="hero-imagen-desarrollador rounded-circle" src="imagenes/imagenes-desarrolladores/perfil1.png" alt="Foto de Jane Doe" data-enter-delay="1500">
-          <div class="thought-bubble" aria-live="polite" aria-atomic="true"></div>
         </div>
         <h1>Hola, soy Daniel Aracena</h1>
         <h2>Ingeniero de Software || Desarrollador Full Stack</h2>
@@ -223,12 +222,17 @@
           }, initialDelay);
         }
 
-        // --- Burbuja de pensamiento dinámica junto a la foto de perfil ---
-        (function setupThoughtBubble() {
-          const wrap = document.querySelector('.profile-wrap');
-          if (!wrap) return;
-          const bubble = wrap.querySelector('.thought-bubble');
-          if (!bubble) return;
+        // --- Notification bubble (bottom-right) with random messages ---
+        (function setupNotificationBubble() {
+          // create/select the notification container near the end of body
+          let bubble = document.querySelector('.notification-bubble');
+          if (!bubble) {
+            bubble = document.createElement('div');
+            bubble.className = 'notification-bubble';
+            bubble.setAttribute('aria-live', 'polite');
+            bubble.setAttribute('aria-atomic', 'true');
+            document.body.appendChild(bubble);
+          }
 
           const messages = [
             'Café y código ☕',
@@ -243,10 +247,11 @@
 
           let last = -1;
           let paused = false;
+          let suppressedByContact = false;
 
           // pause on hover so user can read
-          wrap.addEventListener('mouseenter', () => paused = true);
-          wrap.addEventListener('mouseleave', () => paused = false);
+          bubble.addEventListener('mouseenter', () => paused = true);
+          bubble.addEventListener('mouseleave', () => paused = false);
 
           const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -259,10 +264,11 @@
           }
 
           function scheduleNext() {
+            if (suppressedByContact) return; // don't schedule while contact visible
             const min = 3800, max = 9200;
             const delay = prefersReduced ? 7000 : (Math.random() * (max - min) + min);
             setTimeout(() => {
-              if (!paused) showOnce();
+              if (!paused && !suppressedByContact) showOnce();
               scheduleNext();
             }, delay);
           }
@@ -277,8 +283,36 @@
             setTimeout(() => bubble.classList.remove('visible'), visibleDuration);
           }
 
-          // start schedule after small initial delay so it doesn't overlap entrance
-          setTimeout(scheduleNext, 2500);
+          // Hide bubble when #contacto is visible
+          const contacto = document.getElementById('contacto');
+          if (contacto) {
+            const contactObs = new IntersectionObserver((entries) => {
+              entries.forEach(e => {
+                if (e.isIntersecting) {
+                  suppressedByContact = true;
+                  bubble.classList.remove('visible');
+                  bubble.classList.add('hidden');
+                } else {
+                  suppressedByContact = false;
+                  bubble.classList.remove('hidden');
+                  // schedule next show
+                  scheduleNext();
+                }
+              });
+            }, { threshold: 0.2 });
+            contactObs.observe(contacto);
+          }
+
+          // initial small delay to avoid overlapping with other entrance animations
+          setTimeout(() => {
+            // show an initial message quickly
+            if (!prefersReduced && !suppressedByContact) {
+              showOnce();
+            } else if (!prefersReduced) {
+              bubble.classList.add('visible');
+            }
+            scheduleNext();
+          }, 1800);
         })();
       });
     </script>
