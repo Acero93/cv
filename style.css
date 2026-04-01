@@ -155,6 +155,41 @@ h1 {
   text-align: center;
 }
 
+/* Efecto lupa sutil en 'Sobre mi' - al pasar el mouse las letras se agrandan suavemente */
+.sobre-mi .seccion-texto {
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1),
+              letter-spacing 260ms cubic-bezier(.2,.9,.2,1),
+              text-shadow 260ms ease;
+  transform-origin: center center;
+  will-change: transform, letter-spacing, text-shadow;
+}
+
+.sobre-mi .contenedor:hover .seccion-texto {
+  transform: scale(1.035);
+  letter-spacing: 0.6px;
+  text-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+/* Ajuste para pantallas pequeñas: menos zoom para evitar desbordes */
+@media (max-width: 576px) {
+  .sobre-mi .contenedor:hover .seccion-texto {
+    transform: scale(1.02);
+    letter-spacing: 0.3px;
+    text-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  }
+}
+
+/* Respetar preferencia de reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .sobre-mi .seccion-texto,
+  .sobre-mi .contenedor:hover .seccion-texto {
+    transition: none !important;
+    transform: none !important;
+    letter-spacing: normal !important;
+    text-shadow: none !important;
+  }
+}
+
 /* Experiencia */
 
 .experiencia {
