@@ -400,6 +400,59 @@ footer {
   font-family: 'Quicksand', sans-serif;
 }
 
+/* Animación suave para la sección "Mi Stack de Superpoderes" */
+.img-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.img-stack img {
+  display: inline-block;
+  will-change: transform, opacity;
+  transform-origin: center center;
+  transition: transform 300ms ease;
+  /* animación flotante suave */
+  animation: floaty 6s ease-in-out infinite;
+}
+
+/* Variación de timing para que el movimiento no sea sincronizado */
+.img-stack img:nth-child(3n) { animation-duration: 7s; animation-delay: 0.2s; }
+.img-stack img:nth-child(4n) { animation-duration: 5.5s; animation-delay: 0.4s; }
+.img-stack img:nth-child(5n) { animation-duration: 6.5s; animation-delay: 0.15s; }
+.img-stack img:nth-child(2n) { animation-duration: 6.2s; animation-delay: 0.05s; }
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-4px) rotate(-2deg) scale(1.02);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(3px) rotate(2deg) scale(0.99);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Accesibilidad: respetar preferencia de reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .img-stack img {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 .iconos-redes-sociales a {
   width: 50px;
   height: 50px;
