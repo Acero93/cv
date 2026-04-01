@@ -113,6 +113,7 @@
         const img = document.querySelector('.hero-imagen-desarrollador');
         const title = document.querySelector('.hero-principal h1');
         const subtitle = document.querySelector('.hero-principal h2');
+        const downloadBadge = document.querySelector('.hero-principal .custom-badge');
         if (img) {
           img.classList.add('enter-image');
           toObserve.push(img);
@@ -120,6 +121,11 @@
         if (title) {
           title.classList.add('enter-title');
           toObserve.push(title);
+        }
+        if (downloadBadge) {
+          // preparar el badge para animación de entrada + float
+          downloadBadge.classList.add('enter-download');
+          toObserve.push(downloadBadge);
         }
 
         if (toObserve.length) {
@@ -135,6 +141,13 @@
                 setTimeout(() => {
                   target.classList.add('in-view');
                 }, delay);
+                observer.unobserve(target);
+                return;
+              }
+
+              // Si es el badge de descarga, activar entrada y dejar que la animación float continúe
+              if (target.matches('.hero-principal .custom-badge')) {
+                target.classList.add('in-view');
                 observer.unobserve(target);
                 return;
               }

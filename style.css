@@ -168,6 +168,44 @@ h1 {
   .enter-image, .enter-title { animation: none !important; transform: none !important; opacity: 1 !important; }
 }
 
+/* Entrada y movimiento flotante para el botón Descargar CV */
+.enter-download {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(12px) scale(0.96) rotate(-1deg);
+}
+.enter-download.in-view {
+  /* entrada marcada seguida por un movimiento flotante continuo */
+  animation: downloadEnter 780ms cubic-bezier(.2,.9,.24,1) forwards,
+             downloadFloat 6.6s ease-in-out 820ms infinite;
+}
+
+@keyframes downloadEnter {
+  0% { opacity: 0; transform: translateY(12px) scale(0.96) rotate(-2deg); }
+  60% { opacity: 1; transform: translateY(-8px) scale(1.06) rotate(3deg); }
+  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+}
+
+@keyframes downloadFloat {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.01); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* pequeñas mejoras visuales al botón */
+.custom-badge {
+  background: linear-gradient(135deg,#4779ff,#7ab1ff);
+  color: white;
+  box-shadow: 0 8px 24px rgba(71,121,255,0.12);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter-download { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
 /* Estilos para efecto de tipeo */
 .typing-root .typing-text {
   display: inline-block;
