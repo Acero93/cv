@@ -167,6 +167,31 @@ h1 {
   .enter-image, .enter-title { animation: none !important; transform: none !important; opacity: 1 !important; }
 }
 
+/* Estilos para efecto de tipeo */
+.typing-root .typing-text {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+.typing-root .typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  vertical-align: -0.15em;
+  margin-left: 0.28rem;
+  background-color: currentColor;
+  animation: blinkCursor 1s steps(2,end) infinite;
+}
+
+@keyframes blinkCursor {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-root .typing-cursor { animation: none !important; opacity: 0; }
+}
+
 .hero-principal h1 {
   font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   margin-bottom: 0.5rem;

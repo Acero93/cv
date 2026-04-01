@@ -112,6 +112,7 @@
         const toObserve = [];
         const img = document.querySelector('.hero-imagen-desarrollador');
         const title = document.querySelector('.hero-principal h1');
+        const subtitle = document.querySelector('.hero-principal h2');
         if (img) {
           img.classList.add('enter-image');
           toObserve.push(img);
@@ -126,12 +127,73 @@
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
+
+                // Si el elemento observado es el título, arrancar el efecto de tipeo
+                if (entry.target.matches('.hero-principal h1')) {
+                  startTypingOnTitle();
+                }
+
                 observer.unobserve(entry.target);
               }
             });
           }, { threshold: 0.2 });
 
           toObserve.forEach(el => obs.observe(el));
+        }
+
+        // --- Tipeo para título y subtítulo ---
+        function startTypingOnTitle() {
+          // configurar delays mediante data-attributes si existen
+          const titleDelay = parseInt(title.dataset.typeDelay || title.getAttribute('data-type-delay') || '300', 10);
+          const subDelay = parseInt(subtitle && (subtitle.dataset.typeDelay || subtitle.getAttribute('data-type-delay')) || '900', 10);
+
+          // iniciar tipeo para título
+          if (title) {
+            typeInto(title, { delay: titleDelay, speed: 50 });
+          }
+
+          // iniciar tipeo para subtítulo después de su propio delay
+          if (subtitle) {
+            // schedule after subDelay relative to now
+            setTimeout(() => typeInto(subtitle, { delay: 0, speed: 40 }), subDelay);
+          }
+        }
+
+        function typeInto(el, opts) {
+          const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          const full = el.textContent.trim();
+          if (prefersReduced) {
+            el.textContent = full; // mostrar sin animación
+            return;
+          }
+
+          // limpiar y crear estructura typing root
+          el.textContent = '';
+          const root = document.createElement('span');
+          root.className = 'typing-root';
+          const textSpan = document.createElement('span');
+          textSpan.className = 'typing-text';
+          const cursor = document.createElement('span');
+          cursor.className = 'typing-cursor';
+          root.appendChild(textSpan);
+          root.appendChild(cursor);
+          el.appendChild(root);
+
+          const speed = opts && opts.speed ? opts.speed : 45;
+          const initialDelay = opts && opts.delay ? opts.delay : 0;
+
+          let i = 0;
+          setTimeout(() => {
+            const t = setInterval(() => {
+              i += 1;
+              textSpan.textContent = full.slice(0, i);
+              if (i >= full.length) {
+                clearInterval(t);
+                // opcional: quitar cursor después de pequeño retardo
+                setTimeout(() => cursor.style.opacity = '0', 300);
+              }
+            }, speed);
+          }, initialDelay);
         }
       });
     </script>
