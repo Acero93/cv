@@ -73,6 +73,43 @@
       </div>
     </section>
 
+    <!-- Script: envolver caracteres en spans para efecto lupa por carácter -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function splitChars(node) {
+          if (!node) return;
+          if (node.nodeType === Node.TEXT_NODE) {
+            const text = node.nodeValue;
+            if (!text.trim()) return; // mantener espacios como están
+            const frag = document.createDocumentFragment();
+            for (let ch of text) {
+              if (ch === ' ' || ch === '\n' || ch === '\t') {
+                frag.appendChild(document.createTextNode(ch));
+              } else {
+                const span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = ch;
+                frag.appendChild(span);
+              }
+            }
+            node.parentNode.replaceChild(frag, node);
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            // evitar re-procesar elementos ya divididos
+            if (node.classList && node.classList.contains('char')) return;
+            const children = Array.from(node.childNodes);
+            children.forEach(child => splitChars(child));
+          }
+        }
+
+        document.querySelectorAll('.sobre-mi .seccion-texto').forEach(el => {
+          // solo si no ha sido procesado
+          if (el.dataset.chars === 'true') return;
+          splitChars(el);
+          el.dataset.chars = 'true';
+        });
+      });
+    </script>
+
     <!-- Sobre mi -->
     <section id="sobre-mi" class="sobre-mi seccion-oscura">
       <div class="contenedor sobre-1">

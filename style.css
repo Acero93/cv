@@ -156,26 +156,49 @@ h1 {
 }
 
 /* Efecto lupa sutil en 'Sobre mi' - al pasar el mouse las letras se agrandan suavemente */
+/* Preparación para efecto por carácter: quitar zoom global y usar spans por letra */
 .sobre-mi .seccion-texto {
-  transition: transform 260ms cubic-bezier(.2,.9,.2,1),
-              letter-spacing 260ms cubic-bezier(.2,.9,.2,1),
-              text-shadow 260ms ease;
-  transform-origin: center center;
-  will-change: transform, letter-spacing, text-shadow;
+  /* dejar tamaño base; el efecto por carácter se aplica a cada `.char` */
 }
 
-.sobre-mi .contenedor:hover .seccion-texto {
-  transform: scale(1.035);
-  letter-spacing: 0.6px;
-  text-shadow: 0 8px 22px rgba(0,0,0,0.08);
+/* Efecto lupa por carácter (solo en dispositivos que soportan hover) */
+@media (hover: hover) and (pointer: fine) {
+  .sobre-mi .seccion-texto .char {
+    display: inline-block;
+    transition: transform 200ms cubic-bezier(.2,.9,.2,1),
+                text-shadow 200ms ease,
+                color 200ms ease;
+    transform-origin: center bottom;
+    will-change: transform, text-shadow;
+  }
+
+  .sobre-mi .seccion-texto .char:hover {
+    transform: scale(1.32) translateY(-4px);
+    text-shadow: 0 10px 26px rgba(0,0,0,0.10);
+    color: inherit;
+  }
+
+  /* spacing ligero cuando el caracter está en hover (mejor legibilidad) */
+  .sobre-mi .seccion-texto .char:hover + .char {
+    margin-left: 0.06rem;
+  }
 }
 
-/* Ajuste para pantallas pequeñas: menos zoom para evitar desbordes */
+/* Ajuste para pantallas pequeñas: efecto más sutil */
 @media (max-width: 576px) {
-  .sobre-mi .contenedor:hover .seccion-texto {
-    transform: scale(1.02);
-    letter-spacing: 0.3px;
+  .sobre-mi .seccion-texto .char:hover {
+    transform: scale(1.16) translateY(-2px);
     text-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  }
+}
+
+/* Respetar preferencia reduce-motion */
+@media (prefers-reduced-motion: reduce) {
+  .sobre-mi .seccion-texto .char,
+  .sobre-mi .seccion-texto .char:hover {
+    transition: none !important;
+    transform: none !important;
+    text-shadow: none !important;
   }
 }
 
