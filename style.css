@@ -233,6 +233,26 @@ h1 {
   }
 }
 
+/* Desktop: alinear la burbuja verticalmente al centro a la derecha */
+@media (min-width: 992px) {
+  .notification-bubble {
+    right: 28px;
+    top: 50%;
+    bottom: auto;
+    max-width: 320px;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    /* centrar verticalmente usando translateY(-50%) */
+    transform: translateY(-50%) scale(0.98);
+  }
+  .notification-bubble.visible {
+    transform: translateY(-50%) scale(1);
+  }
+  .notification-bubble.hidden {
+    transform: translateY(-50%) scale(0.98) !important;
+  }
+}
+
 /* Título y mensaje dentro de la notificación */
 .notification-bubble .notification-title {
   font-weight: 700;
