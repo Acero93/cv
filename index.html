@@ -61,7 +61,10 @@
     <!-- Seccion Hero -->
     <section class="hero align-items-stretch">
       <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-        <img class="hero-imagen-desarrollador rounded-circle" src="imagenes/imagenes-desarrolladores/perfil1.png" alt="Foto de Jane Doe">
+        <div class="profile-wrap">
+          <img class="hero-imagen-desarrollador rounded-circle" src="imagenes/imagenes-desarrolladores/perfil1.png" alt="Foto de Jane Doe" data-enter-delay="1500">
+          <div class="thought-bubble" aria-live="polite" aria-atomic="true"></div>
+        </div>
         <h1>Hola, soy Daniel Aracena</h1>
         <h2>Ingeniero de Software || Desarrollador Full Stack</h2>
         <a href="docs/Aracena_Daniel_CV.pdf" download target="_blank">
@@ -219,6 +222,64 @@
             }, speed);
           }, initialDelay);
         }
+
+        // --- Burbuja de pensamiento dinámica junto a la foto de perfil ---
+        (function setupThoughtBubble() {
+          const wrap = document.querySelector('.profile-wrap');
+          if (!wrap) return;
+          const bubble = wrap.querySelector('.thought-bubble');
+          if (!bubble) return;
+
+          const messages = [
+            'Café y código ☕',
+            'Me gusta enseñar programación',
+            'Robótica educativa 🤖',
+            'Fotografía y viajes',
+            'Open source y comunidades',
+            'Aprendiendo nuevas herramientas',
+            'Música electrónica',
+            'Senderismo los fines de semana'
+          ];
+
+          let last = -1;
+          let paused = false;
+
+          // pause on hover so user can read
+          wrap.addEventListener('mouseenter', () => paused = true);
+          wrap.addEventListener('mouseleave', () => paused = false);
+
+          const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+          function pickRandom() {
+            if (messages.length === 0) return '';
+            let idx;
+            do { idx = Math.floor(Math.random() * messages.length); } while (idx === last && messages.length > 1);
+            last = idx;
+            return messages[idx];
+          }
+
+          function scheduleNext() {
+            const min = 3800, max = 9200;
+            const delay = prefersReduced ? 7000 : (Math.random() * (max - min) + min);
+            setTimeout(() => {
+              if (!paused) showOnce();
+              scheduleNext();
+            }, delay);
+          }
+
+          function showOnce() {
+            const text = pickRandom();
+            if (!text) return;
+            bubble.textContent = text;
+            bubble.classList.add('visible');
+            // announce to screen readers by updating aria-live (already set)
+            const visibleDuration = prefersReduced ? 3500 : 4200;
+            setTimeout(() => bubble.classList.remove('visible'), visibleDuration);
+          }
+
+          // start schedule after small initial delay so it doesn't overlap entrance
+          setTimeout(scheduleNext, 2500);
+        })();
       });
     </script>
 
