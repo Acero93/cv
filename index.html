@@ -256,10 +256,19 @@
           let last = -1;
           let paused = false;
           let suppressedByContact = false;
+          let nextTimer = null;
+          let visibleTimer = null;
 
           // pause on hover so user can read
-          bubble.addEventListener('mouseenter', () => paused = true);
-          bubble.addEventListener('mouseleave', () => paused = false);
+          bubble.addEventListener('mouseenter', () => {
+            paused = true;
+            if (nextTimer) { clearTimeout(nextTimer); nextTimer = null; }
+          });
+          bubble.addEventListener('mouseleave', () => {
+            paused = false;
+            // resume scheduling
+            scheduleNext();
+          });
 
           const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -272,11 +281,13 @@
           }
 
           function scheduleNext() {
+            if (nextTimer) { clearTimeout(nextTimer); nextTimer = null; }
             if (suppressedByContact) return; // don't schedule while contact visible
             const min = 3800, max = 9200;
             const delay = prefersReduced ? 7000 : (Math.random() * (max - min) + min);
-            setTimeout(() => {
+            nextTimer = setTimeout(() => {
               if (!paused && !suppressedByContact) showOnce();
+              // schedule the following show only after this branch completes
               scheduleNext();
             }, delay);
           }
@@ -287,9 +298,13 @@
             const msgEl = bubble.querySelector('.notification-message');
             if (msgEl) msgEl.textContent = text;
             bubble.classList.add('visible');
-            // announce to screen readers by updating aria-live (already set)
+            // ensure any pending hide timer is cleared
+            if (visibleTimer) { clearTimeout(visibleTimer); visibleTimer = null; }
             const visibleDuration = prefersReduced ? 3500 : 4200;
-            setTimeout(() => bubble.classList.remove('visible'), visibleDuration);
+            visibleTimer = setTimeout(() => {
+              bubble.classList.remove('visible');
+              visibleTimer = null;
+            }, visibleDuration);
           }
 
           // Hide bubble when #contacto is visible
@@ -301,6 +316,8 @@
                   suppressedByContact = true;
                   bubble.classList.remove('visible');
                   bubble.classList.add('hidden');
+                  if (nextTimer) { clearTimeout(nextTimer); nextTimer = null; }
+                  if (visibleTimer) { clearTimeout(visibleTimer); visibleTimer = null; }
                 } else {
                   suppressedByContact = false;
                   bubble.classList.remove('hidden');
